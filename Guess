@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class GuessANumber
 {
 
@@ -9,6 +10,9 @@ public class GuessANumber
   //returns the number from the user
   private static int getInput()
   {
-  
+    Scanner scan=new Scanner();
+    System.out.println("Your Guess: ");
+    int guess=scan.nextInt();
+    return guess;
   }
 }
