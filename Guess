@@ -15,4 +15,12 @@ public class GuessANumber
     int guess=scan.nextInt();
     return guess;
   }
+  //play again method
+  public boolean playAgain(){
+    Scanner scan=new Scanner();
+    System.out.println("Do you want to play again? (Y/N): ");
+    String guess=scan.nextLine();
+    return (guess=="Y");
+  }
+  
 }
