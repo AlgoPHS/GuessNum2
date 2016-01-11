@@ -1,0 +1,14 @@
+public class GuessANumber
+{
+
+  public static void main(String[] args)
+  {
+  
+  }
+  
+  //returns the number from the user
+  private static int getInput()
+  {
+  
+  }
+}
