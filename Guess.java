@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Random;
 public class GuessANumber
 {
 
@@ -13,10 +14,25 @@ public class GuessANumber
       int guess = -1;
       Random ran = new Random();
       int answer = Random.nextInt(100) + 1;
+      int tries = 0;
       while (guess != answer)
       {
-       
-  
+       guess = getInput();
+       if (guess < answer)
+       {
+        System.out.println("Too low. Try again.");
+       }
+       else if (guess > answer)
+       {
+        System.out.println("Too high. Try again.");
+       }
+       else
+       {
+         System.out.println("Excellent! You guessed the number! You guessed in " + tries + " tries.");
+       }
+      }
+      repeat = playAgain();
+    }
   }
   
   //returns the number from the user
