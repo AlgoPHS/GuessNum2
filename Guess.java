@@ -4,6 +4,18 @@ public class GuessANumber
 
   public static void main(String[] args)
   {
+    boolean repeat = true;
+    while (repeat)
+    {
+      System.out.println("I  have a number between 1 and 100.");
+      System.out.println("Can you guess my number?");
+      System.out.println("Please type your first guess.");
+      int guess = -1;
+      Random ran = new Random();
+      int answer = Random.nextInt(100) + 1;
+      while (guess != answer)
+      {
+       
   
   }
   
