@@ -1,6 +1,6 @@
 import java.util.Scanner;
 import java.util.Random;
-public class GuessANumber
+public class Guess
 {
 
   public static void main(String[] args)
@@ -13,7 +13,7 @@ public class GuessANumber
       System.out.println("Please type your first guess.");
       int guess = -1;
       Random ran = new Random();
-      int answer = Random.nextInt(100) + 1;
+      int answer = ran.nextInt(100) + 1;
       int tries = 0;
       while (guess != answer)
       {
@@ -30,6 +30,7 @@ public class GuessANumber
        {
          System.out.println("Excellent! You guessed the number! You guessed in " + tries + " tries.");
        }
+       tries++;
       }
       repeat = playAgain();
     }
@@ -38,17 +39,18 @@ public class GuessANumber
   //returns the number from the user
   private static int getInput()
   {
-    Scanner scan=new Scanner();
+    Scanner scan=new Scanner(System.in);
     System.out.println("Your Guess: ");
     int guess=scan.nextInt();
     return guess;
   }
   //play again method
-  public boolean playAgain(){
-    Scanner scan=new Scanner();
+  public static boolean playAgain(){
+    Scanner scan=new Scanner(System.in);
     System.out.println("Do you want to play again? (Y/N): ");
     String guess=scan.nextLine();
-    return (guess=="Y");
+    //System.out.println(guess.equals("Y"));
+    return (guess.equals("Y"));
   }
   
 }
